@@ -3,8 +3,6 @@
 public class test1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Teacher t = new Teacher();
-        Student st = new Student();
 
         System.out.println("Enter the number of teacher details you want to enter:");
         int x = sc.nextInt();
@@ -12,7 +10,8 @@ public class test1 {
         int[] age = new int[x];
         String[] subject = new String[x];
         int[] salary = new int[x];
-
+ Teacher t = new Teacher(x);
+        Student st = new Student(y);
         System.out.println("Enter the number of student details you want to enter:");
         int y = sc.nextInt();
         String[] names = new String[y];
@@ -59,11 +58,11 @@ class Teacher {
     int[] salary;
     int l;
 
-    Teacher() {
-        name = new String[100];
-        age = new int[100];
-        subject = new String[100];
-        salary = new int[100];
+    Teacher(int p) {
+        name = new String[p];
+        age = new int[p];
+        subject = new String[p];
+        salary = new int[p];
     }
 
     void teacherdetails(String name1, int age1, String subject1, int salary1, int x, int y) {
@@ -91,10 +90,10 @@ class Student {
     String[] section;
     int l;
 
-    Student() {
-        name = new String[100];
-        Class = new int[100];
-        section = new String[100];
+    Student(int q) {
+        name = new String[q];
+        Class = new int[q];
+        section = new String[q];
     }
 
     void studentdetails(String name1, int Class1, String sec, int x, int y) {
